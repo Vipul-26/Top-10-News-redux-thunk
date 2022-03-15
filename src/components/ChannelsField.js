@@ -1,15 +1,40 @@
 import React from 'react';
 import Channel from '../containers/Channel';
 
-const ChannelsField = () => (
-  <div className="row" data-test="component-channelsfield">
-    <Channel channelString="BBC" channelName="bbc-news" />
-    <Channel channelString="CNBC" channelName="cnbc" />
-    <Channel channelString="CNN" channelName="cnn" />
-    <Channel channelString="FT" channelName="financial-times" />
-    <Channel channelString="ESPN" channelName="espn" />
-    <Channel channelString="TIME" channelName="time" />
-  </div>
-);
-export default ChannelsField;
+const ChannelsField = ({ setDisabled }) => {
 
+  const channelData = [
+    {
+      channelString: "BBC",
+      channelName: "bbc-news",
+    },
+    {
+      channelString: "CNN",
+      channelName: "cnn",
+    },
+    {
+      channelString: "FT",
+      channelName: "financial-times",
+    },
+    {
+      channelString: "ESPN",
+      channelName: "espn",
+    },
+    {
+      channelString: "TIME",
+      channelName: "time",
+    }
+  ];
+
+  return (
+    <div className="row">
+      {channelData.map((data) => {
+        return (
+          <Channel channelString={data.channelString} channelName={data.channelName} setDisabled={setDisabled} />
+        )
+      })}
+    </div>
+  );
+}
+
+export default ChannelsField;

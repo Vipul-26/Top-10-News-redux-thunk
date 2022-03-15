@@ -30,7 +30,6 @@ body {
     border-radius: 5em;
     cursor: pointer;
     border: 4px solid rgb(106, 107, 110);
-    ;
 }
 
 .channel-button:hover {
@@ -82,6 +81,15 @@ a {
     border: none;
 }
 
+.disable {
+    opacity: 1;
+    background: #e2e2e2 !important;
+    color: #888 !important;
+    border-color: #e2e2e2 !important;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
 .btn-lg {
     border-radius: 25px;
     border: none;
@@ -104,4 +112,30 @@ img {
     text-align: center;
     font-size: 40px;
     color: red;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        margin: 0px auto;
+        border: 2px solid blue;
+    }
+
+    .channel-button {
+        margin: 20px auto;
+        height: 70px;
+        width: 70%;
+        border-radius: 4em;
+        border: 2px solid rgb(106, 107, 110);
+    }
+
+    .channel-button p {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 20px;
+        width: 50%;
+        margin: 0 auto 20px auto;
+        height: 50px;
+    }
 }

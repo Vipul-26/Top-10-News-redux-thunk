@@ -21,15 +21,11 @@ let TopNews = ({ data, loading }) => {
             {topNews}
         </div>
     )
-}
+};
 
 const mapStateToProps = (state) => ({
     data: state.data,
     loading: state.loading
-})
+});
 
-export default connect(
-    mapStateToProps,
-    null
-)(TopNews);
-
+export default connect(mapStateToProps, null)(TopNews);

@@ -1,4 +1,6 @@
-const reducer = (state = {}, action) => {
+const initialState = {};
+
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "SELECT_CHANNEL":
       return { ...state, channelName: action.payload };
