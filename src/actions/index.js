@@ -12,7 +12,7 @@ export const receivedPosts = (data) => ({
   payload: data.articles,
 });
 
-export function fetchPosts(channelName) {
+export const fetchPosts = (channelName) => {
   return function (dispatch) {
     dispatch(requestPosts());
     return fetch(`https://newsapi.org/v1/articles?source=${channelName}&apiKey=${process.env.REACT_APP_API_KEY}`)
@@ -24,5 +24,5 @@ export function fetchPosts(channelName) {
         dispatch(receivedPosts(data));
       });
   };
-}
+};
 
